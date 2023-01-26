@@ -1,0 +1,69 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <ComponentGroup Id="TLM_Components" Directory="INSTALLFOLDER" >
+      <Component>
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLM_WinFormsApp.exe" />
+      </Component>
+      <Component>
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLM_WinFormsApp.dll" />
+      </Component>
+      <Component>
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLM_WinFormsApp.dll.config" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\Microsoft.Windows.SDK.NET.dll" />
+      </Component>  
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLMUtilsLibrary.dll" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLM_WinFormsApp.deps.json" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\MySqlBackup(MySql.Data).dll" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLM_WinFormsApp.runtimeconfig.json" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\Google.Protobuf.dll" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\VinValidLibrary.dll" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLM_WinFormsApp.pdb" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\WinRT.Runtime.dll" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\TLMWinFormsLibrary.dll" />
+      </Component>
+      <Component >
+        <File Source="..\TLM_WinFormsApp\bin\Release\net6.0-windows10.0.22621.0\MySql.Data.dll" />
+      </Component>
+      <ComponentRef Id="MainAppShortcut" />
+      <ComponentRef Id="DesktopShortcut" />
+    </ComponentGroup>
+
+    <!-- Program Menu Shortcut -->
+    <DirectoryRef Id="InstallProgramMenuFolder">
+      <Component Id="MainAppShortcut">
+        <Shortcut Id="MainAppShortcut" Name="!(loc.ProductName)" Target="[INSTALLFOLDER]!(loc.ApplicationName)" Directory="InstallProgramMenuFolder" WorkingDirectory="INSTALLFOLDER" Icon="icon.ico" IconIndex="0" Advertise="no" />
+        <RegistryValue Id="RegProgramMenuShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.Company)\ProgramMenu\!(loc.ProductName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes" />
+        <RemoveFolder Id="RemoveProgramMenu" Directory="InstallProgramMenuFolder" On="uninstall" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Desktop Shortcut -->
+    <DirectoryRef Id="MyDesktopFolder">
+      <Component Id="DesktopShortcut" >
+         <Shortcut Id="desktopMyTLM" Name="!(loc.ProductName)" Target="[INSTALLFOLDER]!(loc.ApplicationName)" Directory="MyDesktopFolder" Icon="icon.ico" IconIndex="0" Advertise="no" />
+         <RemoveFolder Id="DesktopShortcut" Directory="MyDesktopFolder" On="uninstall" />
+        <RegistryValue Id="RegDesktopShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.Company)\Desktop\!(loc.ProductName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes" />
+      </Component>
+     </DirectoryRef>
+     
+  </Fragment>
+</Wix>

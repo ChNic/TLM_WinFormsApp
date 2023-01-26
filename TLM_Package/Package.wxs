@@ -1,0 +1,29 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"  xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui" >
+  <Package Name="!(loc.ProductName)" 
+           Manufacturer="!(loc.Manufacturer)"
+           Version="1.0.1.0" 
+           UpgradeCode="bb789032-e7d9-44ca-baa3-c16bbde69f98">
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+
+    <!-- Include .cab file into .msi file -->
+		<MediaTemplate EmbedCab="yes" />
+ 
+    <!-- Create a basic UI for the installer -->
+    <!-- <ui:WixUI Id="Dir:WixUI_Minimal" /> -->
+
+    <!-- Change the installer UI background images -->
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\License.rtf" />
+    <WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp" />
+    <WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp" />
+ 
+    <!-- Define main app icon -->
+    <Icon Id="icon.ico" SourceFile="$(var.ProjectDir)\Wrecker.ico" />
+    
+    <!-- Use the icon.ico icon for this installer (shows up in Add/Remove programs) -->
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <Feature Id="Main">
+      <ComponentGroupRef Id="TLM_Components" />
+    </Feature>
+  </Package>
+</Wix>

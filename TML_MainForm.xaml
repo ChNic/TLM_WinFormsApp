@@ -1,0 +1,56 @@
+<Window x:Class="TLM_WinFormsApp.TLM_MainForm"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="TowLot Management">
+	<Grid Height="524" Width="1344">
+		<DatePicker Name="dateTimePicker1" Height="23" Width="233" TabIndex="2" Margin="878,-15,233,516" HorizontalAlignment="Right"
+		 			VerticalAlignment="Bottom" >
+		</DatePicker>
+		<DataGrid Name="dataGridView1" Height="500" Width="1344" Margin="-10,9,10,15" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+			<DataGrid.Columns></DataGrid.Columns>
+		</DataGrid>
+		<Menu Name="menuStrip1" Height="24" Width="1344" TabIndex="0" Margin="-10,-15,10,515" HorizontalAlignment="Right" 
+			VerticalAlignment="Bottom" >
+			<MenuItem Header="_File" Name="fileToolStripMenuItem" >
+				<MenuItem Header="E_xit" Name="exitToolStripMenuItem1" >
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="_Enter Data" Name="enterDataToolStripMenuItem" >
+				<MenuItem Header="_Add" Name="addToolStripMenuItem" >
+					<MenuItem Header="_Vehicle" Name="vehicleToolStripMenuItem" >
+					</MenuItem>
+					<MenuItem Header="_Owner" Name="ownerToolStripMenuItem" >
+					</MenuItem>
+				</MenuItem>
+				<MenuItem Header="_Edit" Name="editToolStripMenuItem" >
+					<MenuItem Header="_Owner" Name="ownerToolStripMenuItem1" >
+					</MenuItem>
+				</MenuItem>
+				<MenuItem Header="Delete" Name="deleteToolStripMenuItem" >
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="_Maintance" Name="maintanceToolStripMenuItem" >
+				<MenuItem Header="_Add" Name="addToolStripMenuItem1" >
+					<MenuItem Header="_Lot" Name="lotToolStripMenuItem" >
+					</MenuItem>
+					<MenuItem Header="_Rate" Name="rateToolStripMenuItem" >
+					</MenuItem>
+					<MenuItem Header="R_eason" Name="reasonToolStripMenuItem" >
+					</MenuItem>
+				</MenuItem>
+				<MenuItem Header="_Backup Data" Name="backupToolStripMenuItem" >
+				</MenuItem>
+				<MenuItem Header="_Restore Data" Name="restoreDataToolStripMenuItem" >
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="_Refresh Table" Name="refreshTableToolStripMenuItem" >
+			</MenuItem>
+			<MenuItem Header="_Update Amount Due" Name="updateAmtDueToolStripMenuItem" >
+			</MenuItem>
+			<MenuItem Header="_Help" Name="helpToolStripMenuItem" >
+				<MenuItem Header="_About" Name="aboutToolStripMenuItem" >
+				</MenuItem>
+			</MenuItem>
+		</Menu>
+	</Grid>
+</Window>

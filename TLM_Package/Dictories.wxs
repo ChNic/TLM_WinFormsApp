@@ -1,0 +1,21 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+      <!-- Start Menu -->
+     <StandardDirectory Id="ProgramMenuFolder">
+        <Directory Id="InstallProgramMenuFolder" Name="!(loc.ProductName)" /> 
+    </StandardDirectory> 
+    <!-- Desktop Folder-->
+    <StandardDirectory Id="DesktopFolder">
+      <Directory Id="MyDesktopFolder" />
+    </StandardDirectory>
+      <!-- Program Files Folder -->
+    <StandardDirectory Id="ProgramFiles6432Folder">
+      <!-- Manfacturer sub-Folder -->
+      <Directory Id="MyCompanyNameFolder" Name="!(loc.Manufacturer)">
+        <!-- Product sub-Folder -->
+        <Directory Id="INSTALLFOLDER" Name="!(loc.ProductName)" />
+      </Directory>
+    </StandardDirectory>
+  </Fragment>
+
+</Wix>

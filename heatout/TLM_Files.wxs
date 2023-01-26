@@ -1,0 +1,111 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <DirectoryRef Id="TARGETDIR">
+            <Directory Id="dir6BF54E3E2744C2DB0E5914442C1AD971" Name="net6.0-windows10.0.22621.0" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp111B4B601F251765AF24CFB77193961B" Guid="PUT-GUID-HERE">
+                <File Id="filAC4F73B8ACD988257BA2DEC9CF24F901" KeyPath="yes" Source="Microsoft.Windows.SDK.NET.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp18C2ABBA24538E29BCCB824264F3C890" Guid="PUT-GUID-HERE">
+                <File Id="fil8BEC7D17715CD143A1B412CBD2577762" KeyPath="yes" Source="TLM_WinFormsApp.dll.config" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp2678100922DA05256A5685C9BB8C1D99" Guid="PUT-GUID-HERE">
+                <File Id="filB96831AE53F5EFD5526249406912646A" KeyPath="yes" Source="TLMUtilsLibrary.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+  
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp2C36E12C5CF378365CAD4EDC18FB66F4" Guid="PUT-GUID-HERE">
+                <File Id="filDF25C510F97EB346BB6455E7045372EF" KeyPath="yes" Source="TLM_WinFormsApp.exe" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp5ABA5B36359AC47F7E3457E79614DC30" Guid="PUT-GUID-HERE">
+                <File Id="fil73F1A4711F41E9D690329E1AE1FC9C5F" KeyPath="yes" Source="TLM_WinFormsApp.deps.json" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp6630E04AC25948216B4F3FF68D6FC0C0" Guid="PUT-GUID-HERE">
+                <File Id="filEF2FCC8A21F20DCB6815E0830126C90C" KeyPath="yes" Source="MySqlBackup(MySql.Data).dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmp92FD6285C40DDC90FF85A9EA0D1E00AB" Guid="PUT-GUID-HERE">
+                <File Id="fil39413D347B1943347B05084BBD524792" KeyPath="yes" Source="TLM_WinFormsApp.runtimeconfig.json" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+   
+   
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpB4134F550105B235CF3D2AF933A89B70" Guid="PUT-GUID-HERE">
+                <File Id="fil0136A1F3DE8ABF4EDC928A9F61D0C7FC" KeyPath="yes" Source="Google.Protobuf.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpBC2164492C729C1E4E0F6ED88F42F07D" Guid="PUT-GUID-HERE">
+                <File Id="fil66725001C9AA7E096C1D2A1C312572B9" KeyPath="yes" Source="TLM_WinFormsApp.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+   
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpCDF0CC195B873AE13D6646DE57CDF9D4" Guid="PUT-GUID-HERE">
+                <File Id="fil6808593E5B4CC44819590AA3597934B4" KeyPath="yes" Source="VinValidLibrary.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpD3270B24BD0873239A49B53DB08F5768" Guid="PUT-GUID-HERE">
+                <File Id="filEC22B85078E345267ABC8B0FEC20A58E" KeyPath="yes" Source="TLM_WinFormsApp.pdb" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpD88D69B5D30C1B8C3B2CAE3AE1762AFF" Guid="PUT-GUID-HERE">
+                <File Id="fil268BE53268A6CE9AABE3A027EBACD167" KeyPath="yes" Source="WinRT.Runtime.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpE8F3A9688405ED9CF2A82BE5E0410C8B" Guid="PUT-GUID-HERE">
+                <File Id="fil74D85BB2D5922F7C1058B157653D3BE3" KeyPath="yes" Source="TLMWinFormsLibrary.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+   
+    <Fragment>
+        <DirectoryRef Id="dir6BF54E3E2744C2DB0E5914442C1AD971">
+            <Component Id="cmpF3E6EFEA3CC85A7D542ACBB90F8BB627" Guid="PUT-GUID-HERE">
+                <File Id="fil0D98A4B49F0A4860D94226914A3062A6" KeyPath="yes" Source="MySql.Data.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

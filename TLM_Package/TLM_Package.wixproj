@@ -1,0 +1,35 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.0-rc.2">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <LibBindFiles>false</LibBindFiles>
+    <SuppressValidation>false</SuppressValidation>
+    <SuppressIces>
+    </SuppressIces>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="MyProgramMenuFolder" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MyDesktopFolder" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ExampleComponents.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ExampleComponents.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="heatout\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="heatout\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="heatout\TLM_Files.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Sdk" Version="4.0.0-rc.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TLM_WinFormsApp\TLM_WinFormsApp.csproj" />
+  </ItemGroup>
+</Project>

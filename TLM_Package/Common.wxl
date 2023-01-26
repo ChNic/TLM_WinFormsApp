@@ -1,0 +1,9 @@
+﻿<WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl" Culture="en-us" >
+	<String Id="Manufacturer" Value="BNEnterprises" />
+  <String Id="Company" Value="BNEnterprises" />
+  <String Id="ProductName" Value="TowLotManagement" />
+  <String Id="ApplicationName" Value="TLM_WinFormsApp.exe"/>
+  
+  <String Id="DowngradeErrorMessage" Value="A newer version of !(loc.ProductName) is already installed." />
+  
+</WixLocalization>
