@@ -157,7 +157,6 @@ namespace TLM_WinFormsApp
 
             // Load main Window
             String query = ("SELECT id, VIN, Make, Model, Year, Color, OnLot, c.lot_id, lot, Reason, Title, Released, How_released, First_name, Last_name, o.O_id, AmountDue FROM towlot.tlm_vehicle AS c LEFT JOIN towlot.tlm_owner AS o ON c.Owner_id = o.O_id LEFT JOIN towlot.tlm_lot AS l ON c.lot_id = l.lot_id ORDER BY c.id ASC ;");
-            // TLM_Utils.CalculateAmountDue();
             TLM_Utils.load_Table(query, dataGridView1);
         }
 

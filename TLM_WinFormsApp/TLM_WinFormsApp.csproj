@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Compile Remove="MainFormLoad.cs" />
+    <Compile Remove="TLM_Startup.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,9 +22,9 @@
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.28" />
     <PackageReference Include="MySqlBackup.NET" Version="2.3.6.2" />
-    <PackageReference Include="TLMUtilsLibrary" Version="1.0.0.1" />
+    <PackageReference Include="TLMUtilsLibrary" Version="1.0.0.2" />
     <PackageReference Include="TLMWinFormsLibrary" Version="1.0.0.2" />
-    <PackageReference Include="UtilitiesLibrary" Version="1.0.0.1" />
+    <PackageReference Include="UtilitiesLibrary" Version="1.0.0.2" />
     <PackageReference Include="VinValidLibrary" Version="1.0.0" />
   </ItemGroup>
 
@@ -43,7 +44,8 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy app.config &quot;$(TargetPath).config&quot;" />
+    <Exec Command="copy app.config &quot;$(TargetPath).config&quot;&#xD;&#xA;" />
+    <Exec Command="copy &quot;$(SolutionDir)\TLM_WinFormsApp\TowLot.sql&quot; &quot;$(TargetDir)\TowLot.sql&quot;" />
   </Target>
 
 </Project>
