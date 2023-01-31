@@ -27,9 +27,6 @@
     <Compile Remove="heatout\TLM_Files.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WixToolset.Sdk" Version="4.0.0-rc.2" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TLM_WinFormsApp\TLM_WinFormsApp.csproj" />
   </ItemGroup>
 </Project>
