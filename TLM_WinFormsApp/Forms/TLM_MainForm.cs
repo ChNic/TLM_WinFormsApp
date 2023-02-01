@@ -15,6 +15,7 @@ namespace TLM_WinFormsApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            TLMStartup startup = new TLMStartup();
             MainFormLoad();
 
         }

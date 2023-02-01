@@ -8,54 +8,59 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Xml.Linq;
 using TLMUtilsLibraryNS;
 using TLMWinFormsLibrary;
 using UtilitiesLibrary;
 
 namespace TLM_WinFormsApp
 {
-    public partial class TLM_Start : Form
+    internal class TLMStartup
     {
-        private MySqlConnection conDataBase;
-
-        public TLM_Start()
+        public TLMStartup()
         {
-            InitializeComponent();
-            conDataBase = TLM_Startup();
-            if (conDataBase.Database != "towlot")
+            TLMStart();
+        }
+
+        public void TLMStart()
+        {
+            string conn = TLMUtils.GetConString();
+            string dbName = "towlot";
+            //if (conDataBase. != "towlot")
+            if (!DBExists( conn,  dbName))
+            {
                 LoadFromSQL();
+            }
             else
             {
-                // MessageBox.Show("DataBase found.");
+                MessageBox.Show("DataBase found.");
                 
             }
-            this.Close();
-            Application.Run(new TLM_MainForm());
+            // Application.Run(new TLM_MainForm());
+            // Close();
         }
 
-        public MySqlConnection TLM_Startup()
+        public static bool DBExists(string conn, string dbName)
         {
-            // TODO Check for DB
-            // if not found restore form TowLot.sql
+            bool functionReturnValue = false;
 
-            String query = ("select * from towlot.tlm_lot");
-            String constr = TLMUtils.GetConnectionString();
- 
-            try
+            MySqlConnection dbconn = new MySqlConnection(conn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM information_schema.schemata WHERE SCHEMA_NAME=@dbName", dbconn);
             {
-                MySqlConnection conDataBase = new MySqlConnection(constr);
-                return conDataBase;
+                functionReturnValue = false;
+                cmd.Parameters.AddWithValue("@dbName", dbName);
+                dbconn.Open();
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    functionReturnValue = true;
+                }
+                dbconn.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message DBConnection");
-            }
-            return null;
 
+            return functionReturnValue;
         }
 
-        public void LoadFromSQL()
+        public static void LoadFromSQL()
         {
             String TargetFile = "TowLot.sql";
             string ConnectionString = TLMUtils.GetConString();
@@ -75,7 +80,7 @@ namespace TLM_WinFormsApp
                     conn.Close();
                 }
                 // MessageBox.Show("Data Restore Completed...!!!");
-                Close();
+                // Close();
             }
             catch (Exception ex)
             {
@@ -83,7 +88,6 @@ namespace TLM_WinFormsApp
             }
 
         }
-
 
     }
 }
