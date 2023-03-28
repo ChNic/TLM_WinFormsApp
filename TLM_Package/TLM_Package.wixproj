@@ -1,4 +1,4 @@
-﻿<Project Sdk="WixToolset.Sdk/4.0.0-rc.2">
+﻿<Project Sdk="WixToolset.Sdk/4.0.0-rc.4">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <LibBindFiles>false</LibBindFiles>
     <SuppressValidation>false</SuppressValidation>
