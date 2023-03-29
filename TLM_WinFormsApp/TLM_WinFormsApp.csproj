@@ -45,7 +45,7 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy app.config &quot;$(TargetPath).config&quot;&#xD;&#xA;" />
-    <Exec Command="copy &quot;$(SolutionDir)\TLM_WinFormsApp\TowLot.sql&quot; &quot;$(TargetDir)\TowLot.sql&quot;" />
+    <Exec Command="copy TowLot.sql &quot;$(TargetDir)\TowLot.sql&quot;" />
   </Target>
 
 </Project>
