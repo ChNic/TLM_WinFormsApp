@@ -1,5 +1,7 @@
-﻿<WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl" Culture="en-us" >
-	<String Id="Manufacturer" Value="BNEnterprises" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://wixtoolset.org/schemas/v4/wxl">
+
+  <String Id="Manufacturer" Value="BNEnterprises" />
   <String Id="Company" Value="BNEnterprises" />
   <String Id="ProductName" Value="TowLotManagement" />
   <String Id="ApplicationName" Value="TLM_WinFormsApp.exe"/>

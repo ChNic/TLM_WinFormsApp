@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TLM_WinFormsApp": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}
