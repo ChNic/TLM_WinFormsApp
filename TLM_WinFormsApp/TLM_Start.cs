@@ -20,6 +20,20 @@ namespace TLM_WinFormsApp
         public TLMStartup()
         {
             TLMStart();
+            TLMLoadCompanyInfo();
+        }
+
+        private void TLMLoadCompanyInfo()
+        {
+            //throw new NotImplementedException();
+            string conn = TLMUtils.GetConString();
+            // string query = ("SELECT Name FROM towlot.tlm_company_info");
+
+            // if query return null them load_Company_Info.
+            Forms.TLMload_Company_InfoForm frm1 = new Forms.TLMload_Company_InfoForm();
+            frm1.ShowDialog();
+
+
         }
 
         public void TLMStart()
