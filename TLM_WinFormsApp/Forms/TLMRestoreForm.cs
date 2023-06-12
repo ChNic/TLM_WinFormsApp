@@ -65,9 +65,9 @@ namespace TLM_WinFormsApp
                 Close();
             }
             catch (Exception ex)
-	{
+        	{
                 MessageBox.Show(ex.ToString());
             }
-            }
         }
+    }
 }
