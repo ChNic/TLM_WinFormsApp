@@ -20,6 +20,25 @@ USE `towlot`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+--
+-- Table structure for table `tlm_company_info`
+--
+
+DROP TABLE IF EXISTS `tlm_company_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tlm_company_info` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `City` varchar(45) DEFAULT NULL,
+  `State` varchar(45) DEFAULT NULL,
+  `Zip` varchar(45) DEFAULT NULL,
+  `Phone` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 -- 
 -- Definition of tlm_images
 -- 
