@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows10.0.22621.0</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPublishable>False</IsPublishable>
     <ApplicationIcon>app.ico</ApplicationIcon>
+    <StartupObject>TLM_WinFormsApp.Program</StartupObject>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageId />
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +27,6 @@
     <PackageReference Include="MySqlBackup.NET" Version="2.3.6.2" />
     <PackageReference Include="TLMUtilsLibrary" Version="1.0.0.2" />
     <PackageReference Include="TLMWinFormsLibrary" Version="1.0.0.2" />
-    <PackageReference Include="UtilitiesLibrary" Version="1.0.0.2" />
     <PackageReference Include="VinValidLibrary" Version="1.0.0" />
   </ItemGroup>
 
